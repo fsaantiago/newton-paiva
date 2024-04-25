@@ -29,13 +29,13 @@ public class NoticiaController {
         return restTemplate.getForObject(BASE_URL + "/?tipo=release", String.class);
     }
 
-    @PostMapping("/noticias/add")
+    @PostMapping("/noticias")
     public String postNoticias() {
-        return restTemplate.postForObject(BASE_URL + "/?tipo=noticia/add", String.class);
+        return restTemplate.postForObject(BASE_URL + "/?tipo=noticia/add", null, String.class);
     }
 
-    @PostMapping("/releases/add")
+    @PostMapping("/releases")
     public String postReleases() {
-        return restTemplate.postForObject(BASE_URL + "/?tipo=release", String.class);
+        return restTemplate.postForObject(BASE_URL + "/?tipo=release/add", null, String.class);
     }
 }
